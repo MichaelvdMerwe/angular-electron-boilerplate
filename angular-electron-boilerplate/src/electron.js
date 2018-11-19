@@ -8,6 +8,11 @@ let win;
 function createWindow() {
 	win = new BrowserWindow({ width: 1000, height: 800 });
 
+	installExtension(ANGULARJS_BATARANG)
+		.then((name) => console.log(`Added Extension:  ${name}`))
+		.catch((err) => console.log('An error occurred: ', err));
+	//currently causing the application to break on reload
+
 	win.loadURL(
 		url.format({
 			pathname: path.join(__dirname, '/../dist/angular-electron-boilerplate/index.html'),
