@@ -7,20 +7,10 @@ Run Scripts:
 
 Build Scripts: 
 
-1. buildAll : 
-2. buildWin64 :
-3. buildWin32 :
-4. buildLin64 :
-5. buildLin32 :
-6. buildMac64 :
-7. buildMac32 :
-
-"electron": "ng build && electron .",
-		"electron-aot": "ng build --prod && electron .",
-		"buildAll": "rimraf ang-electron-boilerplate-* && electron-packager ./ --all ",
-		"buildWin64": "rimraf ang-electron-boilerplate-* && electron-packager . --platform=win32 --arch=x64",
-		"buildWin32": "rimraf angular-electron-boilerplate-* && electron-packager . --platform=win32 --arch=x32 ",
-		"buildLin64": "rimraf angular-electron-boilerplate-* && electron-packager . --platform=linux --arch=x64 ",
-		"buildLin32": "rimraf angular-electron-boilerplate-* && electron-packager . --platform=linux --arch=x32 ",
-		"buildMac64": "rimraf angular-electron-boilerplate-* && electron-packager . --platform=darwin --arch=x64 ",
-		"buildMac32": "rimraf angular-electron-boilerplate-* && electron-packager . --platform=darwin --arch=x32 "
+1. buildAll : Create executable for ALL(linux, mac, win) on architecture ALL(x32, x64)
+2. buildWin64 : Create executable for Windows on architecture x64
+3. buildWin32 : Create executable for Windows on architecture x32
+4. buildLin64 : Create executable for Linux on architecture x64
+5. buildLin32 : Create executable for Linux on architecture x32
+6. buildMac64 : Create executable for macOS on architecture x64
+7. buildMac32 : Create executable for macOS on architecture x32

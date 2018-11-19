@@ -6,12 +6,24 @@ const path = require('path');
 let win;
 
 function createWindow() {
+	//const { session } = require('electron');
+	// session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+	// 	callback({
+	// 		responseHeaders: {
+	// 			...details.responseHeaders,
+	// 			'Content-Security-Policy': ['default-src \'none\'']
+	// 		}
+	// 	})
+	// })	more information on electron security available on https://electronjs.org/docs/tutorial/security 
+	//trying to set the session content security policy so the warning goes away in dev mode, currently it seems like there are some issues with how this works. Will read up more and figure out a workaround
+
 	win = new BrowserWindow({ width: 1000, height: 800 });
 
 	installExtension(ANGULARJS_BATARANG)
 		.then((name) => console.log(`Added Extension:  ${name}`))
 		.catch((err) => console.log('An error occurred: ', err));
 	//currently causing the application to break on reload
+	//there is an issue with the cookies, still need to find a fix for it
 
 	win.loadURL(
 		url.format({
