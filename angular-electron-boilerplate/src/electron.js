@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const { default: installExtension, ANGULARJS_BATARANG } = require('electron-devtools-installer');
 
 const url = require('url');
 const path = require('path');
